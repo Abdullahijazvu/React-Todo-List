@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types'
+
 class Addtodo extends Component {
 state = {
     title: ''
@@ -19,5 +21,11 @@ onChange = (e) => this.setState({[e.target.name]: e.target.value})
     )
   }
 }
+
+//PropTypes
+Addtodo.propTypes = {
+  addTodo: PropTypes.func.isRequired
+}
+
 
 export default Addtodo
